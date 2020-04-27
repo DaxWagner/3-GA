@@ -1,6 +1,14 @@
 language: java
 jdk:
 - openjdk8
+addons:
+  sonarcloud:
+    organization: "daxwagner"
+    token:
+      secure: "VRs7iv/XV+0y0s71DGTcfpT8uOv+ffL6cizk3mYo1SHX3KrCmJoYzz6iJGUYCCTO3O+Mzv8EQNXq4wDAq6ArDXkTzb0Ng+mEbG2ZsgSVkzOyAT/8BUNjtnRVkmrRG8TewzbvvWX1H5pahPUkAMDTGY++bw+G5s68CNaIHdJjOC9O8Uxo6tCI67xSKcnZ/mGvJAVsAbowGsqy9UDqegUqz2vwFU57kc2FToaEvg/lYZOYgM6SKrYqibL0541AtOc16e8Ylam6M2xcVSfcPvi3yLWWCuKwEipDRlv1Ob9us+1vZCYmNcxNN0IM8iuHNK8hcNrieSkEDXCLhSJmITd0CK3EIoV5AMbY4lWnJeFT2nlSdiH3x2O+Fo1pNVrHLD6Yn8j4bUj9Mu5mcIh4sKpRzjGS5zJbXJbOWE4GT/ylaja67CB1dQxmuyfBjqKPdSkQ/WJ3ZF6NQ9x8YNtx/wwYGra2DnSKcwxuzu0dulGb2biND1pgV/4zTiFvwEumzdB9Dz4X4Ivar1X+EketZPZqJd8lUr/ftfEQBlpip8YgASVpEP2ERj2ckBNFwHffCTTIaEf0g3U99Ro4zNaXDstgujlNGp+LiSnNdDkBYSbFIN6G07GpV6e8RcoOk3wdoesgmOyKuEwtB8zskOp2SH5D0Mdkhmw5lMHGrc8WGG9FeQU="
+
 script: 
 - ant build
+# the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+- sonar-scanner
 
