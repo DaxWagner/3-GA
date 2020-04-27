@@ -9,13 +9,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.lang.Math;
 
 public class Main extends Application{
 
@@ -241,7 +239,7 @@ public class Main extends Application{
 
             if (num < 100)
             {
-                if (dec == false){
+                if (!dec){
                     arg = arg * 10 + num;
                 }
                 else{
@@ -272,7 +270,6 @@ public class Main extends Application{
 
     }
         
-        arguments = new ArrayList<>();
         return Double.toString(total);
 
     }
